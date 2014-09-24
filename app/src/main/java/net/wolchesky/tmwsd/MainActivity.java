@@ -1,9 +1,12 @@
 package net.wolchesky.tmwsd;
 
 import android.app.ActionBar;
+import android.app.AlertDialog;
 import android.app.FragmentTransaction;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -18,6 +21,33 @@ import com.parse.ParseUser;
 
 public class MainActivity extends FragmentActivity implements ActionBar.TabListener {
     public static final String TAG = MainActivity.class.getSimpleName();
+    public static final int takePhotoRequest = 0;
+    public static final int takeVideoRequest = 1;
+    public static final int pickPhoto = 2;
+    public static final int pickVideo = 3;
+
+    protected DialogInterface.OnClickListener mOnClickListener = new DialogInterface.OnClickListener() {
+        @Override
+        public void onClick(DialogInterface dialogInterface, int i) {
+            switch (i) {
+                case 0:
+                    //take picture
+                    Intent takePhotoIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                    startActivityForResult(takePhotoIntent, takePhotoRequest);
+                    break;
+                case 1:
+                    //take video
+                    break;
+                case 2:
+                    //choose picture
+                    break;
+                case 3:
+                    //choose video
+                    break;
+
+            }
+        }
+    };
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -104,14 +134,20 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        if (id == R.id.action_logout) {
-            ParseUser.logOut();
-            navigateToLogin();
-            return true;
-        } else if (id == R.id.action_edit_friends) {
-            Intent intent = new Intent(this, EditFriendsActivity.class);
-            startActivity(intent);
+        switch (id) {
+            case R.id.action_logout:
+                ParseUser.logOut();
+                navigateToLogin();
+            case R.id.action_edit_friends:
+                Intent intent = new Intent(this, EditFriendsActivity.class);
+                startActivity(intent);
+            case R.id.action_camera:
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setItems(R.array.camera_choices, mOnClickListener);
+                AlertDialog dialog = builder.create();
+                dialog.show();
         }
+
         return super.onOptionsItemSelected(item);
     }
 
