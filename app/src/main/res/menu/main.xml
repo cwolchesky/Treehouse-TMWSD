@@ -9,4 +9,9 @@
         android:title="@string/action_logout"
         android:orderInCategory="100"
         android:showAsAction="never" />
+    <item android:id="@+id/action_camera"
+        android:title="@string/menu_camera_label"
+        android:icon="@drawable/ic_action_camera"
+        android:orderInCategory="100"
+        android:showAsAction="always" />
 </menu>
