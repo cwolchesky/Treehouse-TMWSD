@@ -24,4 +24,5 @@ dependencies {
     compile 'com.android.support:support-v13:20.0.0'
     compile files('src/main/libs/Parse-1.6.0.jar')
     compile files('src/main/libs/commons-io-2.4.jar')
+    compile files('src/main/libs/picasso-2.3.4.jar')
 }
