@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ThisMessageWillSelfDestruct.iml" filepath="$PROJECT_DIR$/ThisMessageWillSelfDestruct.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Treehouse-TMWSD.iml" filepath="$PROJECT_DIR$/Treehouse-TMWSD.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
