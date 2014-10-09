@@ -9,8 +9,8 @@
     <string name="title_activity_login">Login</string>
     <string name="username_hint">Username</string>
     <string name="password_hint">Password</string>
-    <string name="login_button_label">Login</string>
-    <string name="signup_text">Sign Up</string>
+    <string name="login_button_label">SIGN IN</string>
+    <string name="signup_text">Don\'t have an account? Sign Up!</string>
     <string name="title_activity_sign_up">Sign Up</string>
     <string name="email_hint">Email</string>
     <string name="signup_button_text">Sign Up</string>
@@ -45,5 +45,8 @@
     <string name="success_message">Message sent!</string>
     <string name="error_sending_message">There was an error sending your message.  Please try again.</string>
     <string name="title_activity_view_image">This Message Will Self Destruct</string>
+    <string name="content_desc_background">Ribbit Frog Background Image</string>
+    <string name="name_ribbit">Ribbit</string>
+    <string name="subtitle">A Treehouse Project</string>
 
 </resources>
