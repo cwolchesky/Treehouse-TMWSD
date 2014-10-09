@@ -13,7 +13,7 @@
     <string name="signup_text">Don\'t have an account? Sign Up!</string>
     <string name="title_activity_sign_up">Sign Up</string>
     <string name="email_hint">Email</string>
-    <string name="signup_button_text">Sign Up</string>
+    <string name="signup_button_text">SIGN UP</string>
     <string name="signup_error_message">Please enter a username, password and email.</string>
     <string name="login_error_message">You must provide a username and password.</string>
     <string name="oops_error">Oops!</string>
