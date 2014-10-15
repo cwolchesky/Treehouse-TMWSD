@@ -52,5 +52,7 @@
     <string name="content_desc_buttong_divider">Button Divider</string>
     <string name="content_desc_message_icon">Message icon</string>
     <string name="placeholder_text">Placeholder Text</string>
+    <string name="content_desc_user_avatar">User Avatar</string>
+    <string name="content_desc_user_checked">User Check Mark</string>
 
 </resources>
