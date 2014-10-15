@@ -1,4 +1,4 @@
-package net.wolchesky.tmwsd;
+package net.wolchesky.tmwsd.ui;
 
 import android.app.ActionBar;
 import android.app.AlertDialog;
@@ -20,6 +20,10 @@ import android.widget.Toast;
 
 import com.parse.ParseAnalytics;
 import com.parse.ParseUser;
+
+import net.wolchesky.tmwsd.utils.ParseConstants;
+import net.wolchesky.tmwsd.R;
+import net.wolchesky.tmwsd.adapters.SectionsPagerAdapter;
 
 import java.io.File;
 import java.io.IOException;

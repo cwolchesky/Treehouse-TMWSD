@@ -1,9 +1,13 @@
-package net.wolchesky.tmwsd;
+package net.wolchesky.tmwsd.adapters;
 
 import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+
+import net.wolchesky.tmwsd.R;
+import net.wolchesky.tmwsd.ui.FriendsFragment;
+import net.wolchesky.tmwsd.ui.InboxFragment;
 
 import java.util.Locale;
 

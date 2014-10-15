@@ -1,4 +1,4 @@
-package net.wolchesky.tmwsd;
+package net.wolchesky.tmwsd.ui;
 
 import android.app.ActionBar;
 import android.app.Activity;
@@ -14,6 +14,8 @@ import android.widget.TextView;
 import com.parse.LogInCallback;
 import com.parse.ParseException;
 import com.parse.ParseUser;
+
+import net.wolchesky.tmwsd.R;
 
 
 public class LoginActivity extends Activity {

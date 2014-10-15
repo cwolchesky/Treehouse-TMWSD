@@ -1,4 +1,4 @@
-package net.wolchesky.tmwsd;
+package net.wolchesky.tmwsd.ui;
 
 import android.app.ActionBar;
 import android.app.Activity;
@@ -13,6 +13,8 @@ import android.widget.EditText;
 import com.parse.ParseException;
 import com.parse.ParseUser;
 import com.parse.SignUpCallback;
+
+import net.wolchesky.tmwsd.R;
 
 
 public class SignUpActivity extends Activity {

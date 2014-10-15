@@ -1,4 +1,4 @@
-package net.wolchesky.tmwsd;
+package net.wolchesky.tmwsd.ui;
 
 import android.app.AlertDialog;
 import android.app.ListActivity;
@@ -22,6 +22,10 @@ import com.parse.ParseQuery;
 import com.parse.ParseRelation;
 import com.parse.ParseUser;
 import com.parse.SaveCallback;
+
+import net.wolchesky.tmwsd.utils.FileHelper;
+import net.wolchesky.tmwsd.utils.ParseConstants;
+import net.wolchesky.tmwsd.R;
 
 import java.util.ArrayList;
 import java.util.List;

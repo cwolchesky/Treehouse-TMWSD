@@ -1,4 +1,4 @@
-package net.wolchesky.tmwsd;
+package net.wolchesky.tmwsd.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,6 +9,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.parse.ParseObject;
+
+import net.wolchesky.tmwsd.utils.ParseConstants;
+import net.wolchesky.tmwsd.R;
 
 import java.util.List;
 

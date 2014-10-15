@@ -1,4 +1,4 @@
-package net.wolchesky.tmwsd;
+package net.wolchesky.tmwsd.utils;
 
 public final class ParseConstants {
     //Class Names

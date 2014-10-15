@@ -1,4 +1,4 @@
-package net.wolchesky.tmwsd;
+package net.wolchesky.tmwsd.ui;
 
 import android.app.Activity;
 import android.net.Uri;
@@ -8,6 +8,8 @@ import android.view.MenuItem;
 import android.widget.ImageView;
 
 import com.squareup.picasso.Picasso;
+
+import net.wolchesky.tmwsd.R;
 
 import java.util.Timer;
 import java.util.TimerTask;

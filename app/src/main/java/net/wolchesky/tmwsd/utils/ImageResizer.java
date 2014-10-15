@@ -1,4 +1,4 @@
-package net.wolchesky.tmwsd;
+package net.wolchesky.tmwsd.utils;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
