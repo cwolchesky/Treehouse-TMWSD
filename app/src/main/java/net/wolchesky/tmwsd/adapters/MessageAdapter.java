@@ -1,6 +1,7 @@
 package net.wolchesky.tmwsd.adapters;
 
 import android.content.Context;
+import android.text.format.DateUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,9 +11,10 @@ import android.widget.TextView;
 
 import com.parse.ParseObject;
 
-import net.wolchesky.tmwsd.utils.ParseConstants;
 import net.wolchesky.tmwsd.R;
+import net.wolchesky.tmwsd.utils.ParseConstants;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -37,6 +39,7 @@ public class MessageAdapter extends ArrayAdapter<ParseObject> {
             holder = new ViewHolder();
             holder.iconView = (ImageView) convertView.findViewById(R.id.messageIcon);
             holder.nameLabel = (TextView) convertView.findViewById(R.id.senderLabel);
+            holder.timeLabel = (TextView) convertView.findViewById(R.id.timeLabel);
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();
@@ -44,10 +47,17 @@ public class MessageAdapter extends ArrayAdapter<ParseObject> {
 
         ParseObject message = mMessages.get(position);
 
+        Date createdAt = message.getCreatedAt();
+        long now = new Date().getTime();
+        String convertedDate = DateUtils.getRelativeTimeSpanString(createdAt.getTime(), now, DateUtils.SECOND_IN_MILLIS).toString();
+
+        holder.timeLabel.setText(convertedDate);
+
+
         if (message.getString(ParseConstants.KEY_FILE_TYPE).equals(ParseConstants.TYPE_IMAGE)) {
-            holder.iconView.setImageResource(R.drawable.ic_action_picture);
+            holder.iconView.setImageResource(R.drawable.ic_picture);
         } else {
-            holder.iconView.setImageResource(R.drawable.ic_action_play_over_video);
+            holder.iconView.setImageResource(R.drawable.ic_video);
         }
         holder.nameLabel.setText(message.getString(ParseConstants.KEY_SENDER_NAME));
 
@@ -63,6 +73,6 @@ public class MessageAdapter extends ArrayAdapter<ParseObject> {
     private static class ViewHolder {
         ImageView iconView;
         TextView nameLabel;
-
+        TextView timeLabel;
     }
 }

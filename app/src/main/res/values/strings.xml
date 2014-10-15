@@ -50,5 +50,7 @@
     <string name="subtitle">A Treehouse Project</string>
     <string name="cancel_button_text">CANCEL</string>
     <string name="content_desc_buttong_divider">Button Divider</string>
+    <string name="content_desc_message_icon">Message icon</string>
+    <string name="placeholder_text">Placeholder Text</string>
 
 </resources>
