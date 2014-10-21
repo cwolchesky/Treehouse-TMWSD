@@ -15,6 +15,7 @@ import com.parse.ParseUser;
 import com.parse.SignUpCallback;
 
 import net.wolchesky.tmwsd.R;
+import net.wolchesky.tmwsd.TMWSDApplication;
 
 
 public class SignUpActivity extends Activity {
@@ -72,6 +73,8 @@ public class SignUpActivity extends Activity {
                         public void done(ParseException e) {
                             setProgressBarIndeterminate(false);
                             if (e == null) {
+                                TMWSDApplication.updateParseInstallation(ParseUser.getCurrentUser());
+
                                 Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
                                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);

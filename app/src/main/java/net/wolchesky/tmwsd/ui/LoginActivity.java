@@ -16,6 +16,7 @@ import com.parse.ParseException;
 import com.parse.ParseUser;
 
 import net.wolchesky.tmwsd.R;
+import net.wolchesky.tmwsd.TMWSDApplication;
 
 
 public class LoginActivity extends Activity {
@@ -54,7 +55,7 @@ public class LoginActivity extends Activity {
             @Override
             public void onClick(View view) {
 
-                String username = mUsername.getText().toString();
+                final String username = mUsername.getText().toString();
                 String password = mPassword.getText().toString();
 
                 if(username.isEmpty() || password.isEmpty()) {
@@ -71,6 +72,8 @@ public class LoginActivity extends Activity {
                         public void done(ParseUser parseUser, ParseException e) {
                             setProgressBarIndeterminate(false);
                             if (e == null) {
+                                TMWSDApplication.updateParseInstallation(parseUser);
+
                                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);

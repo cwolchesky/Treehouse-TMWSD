@@ -54,5 +54,6 @@
     <string name="placeholder_text">Placeholder Text</string>
     <string name="content_desc_user_avatar">User Avatar</string>
     <string name="content_desc_user_checked">User Check Mark</string>
+    <string name="push_message">You have a new message from %s!</string>
 
 </resources>
